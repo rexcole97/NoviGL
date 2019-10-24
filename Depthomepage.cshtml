@@ -1,0 +1,13 @@
+﻿@page
+@model NavistarGL.Pages.DepthomepageModel
+@{
+    ViewData["Title"] = "Depthomepage";
+}
+
+<h1>Depthomepage</h1>
+@foreach (var a_list in Model.Employees)
+{
+    <h1>@a_list.Depts</h1>
+    <a asp-page="./trust" asp-route-id="@a_list.EID">Go to true!</a>
+}
+
